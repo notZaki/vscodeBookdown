@@ -1,0 +1,28 @@
+{
+	"fileTypes": [],
+	"injectionSelector": "L:markup.fenced_code.block.markdown",
+	"patterns": [
+		{
+			"include": "#r-code-block"
+		}
+	],
+	"repository": {
+		"r-code-block": {
+			"begin": "{r(\\s+[^`~]*)?$",
+			"end": "(^|\\G)(?=\\s*[`~]{3,}\\s*$)",
+			"patterns": [
+				{
+					"begin": "(^|\\G)(\\s*)(.*)",
+					"while": "(^|\\G)(?!\\s*([`~]{3,})\\s*$)",
+					"contentName": "meta.embedded.block.r",
+					"patterns": [
+						{
+							"include": "source.r"
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "bookdown.knitr.chunk"
+}

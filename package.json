@@ -1,0 +1,163 @@
+{
+    "name": "vscode-bookdown",
+    "displayName": "vscode Bookdown",
+    "description": "Snippets and auto-completion for Bookdown",
+    "version": "0.0.1",
+    "publisher": "notZaki",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "icon": "icon.png",
+    "homepage": "https://github.com/notZaki/vscodeBookdown",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/notZaki/vscodeBookdown"
+    },
+    "bugs": {
+        "url": "https://github.com/notZaki/vscodeBookdown/issues"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:markdown"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "markdown",
+                "path": "./snippets/bookdown.json"
+            }
+        ],
+        "grammars": [
+            {
+                "scopeName": "bookdown.knitr.chunk",
+                "path": "./syntaxes/r.json",
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.block.r": "R"
+                }
+            },
+            {
+                "scopeName": "bookdown.math.block",
+                "path": "./syntaxes/texblock.json",
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "embeddedLanguages": {
+                    "meta.function.environment.math.latex": "latex"
+                }
+            },
+            {
+                "scopeName": "bookdown.math.inline",
+                "path": "./syntaxes/texinline.json",
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.bookdown.math.inline": "latex"
+                }
+            },
+            {
+                "injectTo": [
+                    "text.html.markdown"
+                ],
+                "scopeName": "bookdown.highlights",
+                "path": "./syntaxes/bookdown.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "Bookdown.ServeBook",
+                "title": "Bookdown: Serve Book"
+            },
+            {
+                "command": "Bookdown.CloseBookServer",
+                "title": "Bookdown: Close Book Server"
+            },
+            {
+                "command": "Bookdown.CloseTerminal",
+                "title": "Bookdown: Close Terminal"
+            },
+            {
+                "command": "Bookdown.RenderGitbook",
+                "title": "Bookdown: Gitbook"
+            },
+            {
+                "command": "Bookdown.RenderPDFbook",
+                "title": "Bookdown: PDF Book"
+            },
+            {
+                "command": "Bookdown.RenderCustom",
+                "title": "Bookdown: Render arbitrary output"
+            }
+        ],
+        "configuration": {
+            "title": "Bookdown",
+            "properties": {
+                "Bookdown.R": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Path to R executable, if it isn't already in system PATH"
+                },
+                "Bookdown.ShowTerminal": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Should R terminal be brought into view when used."
+                },
+                "Bookdown.ShowLog": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Should extension log be shown in output channel."
+                },
+                "Bookdown.UseRmdFilesYAML": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Should the rmd_files YAML be used to search for autocomplete suggestions"
+                },
+                "Bookdown.Opts.Gitbook": {
+                    "type": "string",
+                    "default": "'index.Rmd','bookdown::gitbook'",
+                    "description": "Argument to bookdown::render_book()"
+                },
+                "Bookdown.Opts.PDFbook": {
+                    "type": "string",
+                    "default": "'index.Rmd','bookdown::pdf_book'",
+                    "description": "Argument to bookdown::pdf_book()"
+                },
+                "Bookdown.Opts.Custom": {
+                    "type": "array",
+                    "default": [
+                        {
+                            "name": "HTML Book",
+                            "opts": "'index.Rmd','bookdown::html_document2'"
+                        },
+                        {
+                            "name": "DOCX Book",
+                            "opts": "'index.Rmd','bookdown::word_document2'"
+                        }
+                    ],
+                    "description": "Arguments to bookdown::render_book() for arbitrary outputs"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^3.2.4",
+        "vscode": "^1.1.28",
+        "tslint": "^5.12.1",
+        "@types/node": "^10.12.18",
+        "@types/mocha": "^5.2.5"
+    }
+}

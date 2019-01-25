@@ -1,0 +1,55 @@
+{
+	"equation" : {
+		"prefix": "\\eq",
+		"body": "\\begin{equation}\n\t(\\#eq:${1:<label>})\n\t$0\n\\end{equation}",
+		"description": "Insert an equation environment"
+	},
+
+	"equation*" : {
+		"prefix": "\\eq*",
+		"body": "\\begin{equation*}\n\t$0\n\\end{equation*}",
+		"description": "Insert an equation* environment"
+	},
+	
+	"align" : {
+		"prefix": "\\align",
+		"body": "\\begin{align}\n\t(\\#eq:${1:<label>})\n\t$0\n\\end{align}",
+		"description": "Insert an align environment"
+	},
+	
+	"split" : {
+		"prefix": "\\split",
+		"body": "\\begin{equation}\n\t(\\#eq:${1:<label>})\n\t\\begin{split}\n\t\t$0\n\t\\end{split}\n\\end{equation}",
+		"description": "Insert a split equation environment"
+	},
+	
+	"reference" : {
+		"prefix": "\\@",
+		"body": "\\@ref($0)",
+		"description": "Autocomplete cross-reference command"
+	},
+	
+	"r-chunk-generic" : {
+		"prefix": "\\rcode",
+		"body": "```{r ${1:<chunk-label>}, echo = ${2:FALSE}}\n$0\n```",
+		"description": "Insert R code chunk"
+	},
+	
+	"r-chunk-figure" : {
+		"prefix": "\\rfig",
+		"body": "```{r ${1:<chunk-label>}, echo = ${2:FALSE}, fig.cap = '${3:FigureCaption}'}\n$0\n```",
+		"description": "Insert R code chunk for figures "
+	},
+		
+	"knitr-figure" : {
+        "prefix": "\\knitfig",
+        "body": "```{r ${1:<chunk-label>}, echo = ${2:FALSE}, fig.cap = '${3:FigureCaption}'}\nknitr::include_graphics('$0')\n```",
+		"description": "Insert knitr include_graphics environment"
+	},
+		
+	"bookdown-image" : {
+			"prefix": "\\img",
+			"body": "![(\\#fig:${1:<fig-label>}) $0](${2:<path/to/img>})",
+	"description": "Insert local image in bookdown"
+	}
+}

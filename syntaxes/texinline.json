@@ -1,0 +1,17 @@
+{
+    "fileTypes": [],
+    "scopeName": "bookdown.math.inline",
+    "injectionSelector": "L:text.html.markdown",
+    "patterns": [
+        {
+            "contentName": "meta.embedded.bookdown.math.inline",
+            "begin": "[\t ,.;|](?=\\$)",
+            "end": "(?<=\\$)[\t ,.;|]",
+            "patterns": [
+                {
+                    "include": "text.tex.latex"
+                }
+            ]
+        }
+    ]
+}
