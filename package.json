@@ -1,8 +1,8 @@
 {
     "name": "vscode-bookdown",
-    "displayName": "vscode Bookdown",
+    "displayName": "Bookdown",
     "description": "Snippets and auto-completion for Bookdown",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "notZaki",
     "engines": {
         "vscode": "^1.30.0"
@@ -21,13 +21,18 @@
         "Other"
     ],
     "activationEvents": [
-        "onLanguage:markdown"
+        "onLanguage:markdown",
+        "onLanguage:rmd"
     ],
     "main": "./out/extension",
     "contributes": {
         "snippets": [
             {
                 "language": "markdown",
+                "path": "./snippets/bookdown.json"
+            },
+            {
+                "language": "rmd",
                 "path": "./snippets/bookdown.json"
             }
         ],
@@ -63,11 +68,11 @@
                 }
             },
             {
+                "scopeName": "bookdown.highlights",
+                "path": "./syntaxes/bookdown.json",
                 "injectTo": [
                     "text.html.markdown"
-                ],
-                "scopeName": "bookdown.highlights",
-                "path": "./syntaxes/bookdown.json"
+                ]
             }
         ],
         "commands": [
