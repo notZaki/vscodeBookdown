@@ -5,8 +5,8 @@
     "patterns": [
         {
             "contentName": "meta.embedded.bookdown.math.inline",
-            "begin": "[\t ,.;|](?=\\$)",
-            "end": "(?<=\\$)[\t ,.;|]",
+            "begin": "(\\s+|[\\t,.;|])(?=\\$)",
+            "end": "(?<=\\$)([\\t ,.;|]|$)",
             "patterns": [
                 {
                     "include": "text.tex.latex"

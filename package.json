@@ -1,8 +1,8 @@
 {
     "name": "vscode-bookdown",
-    "displayName": "Bookdown",
+    "displayName": "Bookdown Tools",
     "description": "Snippets and auto-completion for Bookdown",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "notZaki",
     "engines": {
         "vscode": "^1.30.0"

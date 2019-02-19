@@ -16,7 +16,7 @@ If this isn't the case, then the path to the R binary can be specified in the `B
 A list of snippets is in `./snippets/bookdown.json`. Typing the prefix will typically cause the snippet suggestion to appear. If not, hit `Ctrl + Space` to trigger it and `Tab` to cycle through the different fields.
 
 - Equations
-    + Highlighting and snippets require the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)
+    + Highlighting and snippets inside the math environment are provided by the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)
 ![Example of equation snippet](imgs/emplEquationSnippet.gif)
     
 
@@ -25,7 +25,7 @@ A list of snippets is in `./snippets/bookdown.json`. Typing the prefix will typi
 ![Example of markdown figure snippet](imgs/emplImgSnippet.gif)
 
 - R code chunks
-    - Highlighting and snippets require the [vscode R extension](https://github.com/Ikuyadeu/vscode-R) 
+    - Highlighting and snippets inside the codeblock are provided by the [vscode R extension](https://github.com/Ikuyadeu/vscode-R) 
 ![Example of R code chunk snippet](imgs/emplChunkSnippet.gif)
 
 ### Intellisense autocompletion for cross-references
@@ -93,4 +93,4 @@ The options for these commands are mentioned in the Configuration section below.
 - The code for autocompleting cross-references was based on the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)
 - The syntax injection is adapted from the [vscode-fenced-code-block-grammar-injection-example](https://github.com/mjbvz/vscode-fenced-code-block-grammar-injection-example)
 - Highlighting of code in R chunks requires the [vscode R extension](https://github.com/Ikuyadeu/vscode-R) 
-- Hightlighting of math requires the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)
+- Hightlighting and snippets inside TeX-Math requires the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)
