@@ -2,10 +2,10 @@
     "name": "vscode-bookdown",
     "displayName": "Bookdown Tools",
     "description": "Snippets and auto-completion for Bookdown",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "notZaki",
     "engines": {
-        "vscode": "^1.30.0"
+        "vscode": "^1.32.0"
     },
     "icon": "icon.png",
     "homepage": "https://github.com/notZaki/vscodeBookdown",
@@ -111,7 +111,7 @@
                 },
                 "Bookdown.ShowTerminal": {
                     "type": "boolean",
-                    "default": false,
+                    "default": true,
                     "description": "Should R terminal be brought into view when used."
                 },
                 "Bookdown.ShowLog": {
@@ -159,9 +159,9 @@
         "test": "npm run compile && node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^3.2.4",
-        "vscode": "^1.1.28",
-        "tslint": "^5.12.1",
+        "typescript": "^3.3.0",
+        "vscode": "^1.1.30",
+        "tslint": "^5.13.1",
         "@types/node": "^10.12.18",
         "@types/mocha": "^5.2.5"
     }

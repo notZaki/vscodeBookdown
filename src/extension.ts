@@ -67,8 +67,8 @@ export class Extension {
 
     constructor() {
         this.completer = new Completer(this);
-        this.logPanel = vscode.window.createOutputChannel('Bookdown Extension');
-        this.log(`Bookdown extension is now activated`);
+        this.logPanel = vscode.window.createOutputChannel('Bookdown Tools');
+        this.log(`Bookdown tools extension is now activated`);
     }
 
     cfg() {return(vscode.workspace.getConfiguration('Bookdown'));}
