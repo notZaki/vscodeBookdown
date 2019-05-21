@@ -16,16 +16,19 @@ If this isn't the case, then the path to the R binary can be specified in the `B
 A list of snippets is in `./snippets/bookdown.json`. Typing the prefix will typically cause the snippet suggestion to appear. If not, hit `Ctrl + Space` to trigger it and `Tab` to cycle through the different fields.
 
 - Equations
-    + Highlighting and snippets inside the math environment are provided by the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)
+    + Highlighting and snippets inside the math environment are provided by the [LaTeX-Workshop extension](https://github.com/James-Yu/LaTeX-Workshop)  
+
 ![Example of equation snippet](imgs/emplEquationSnippet.gif)
     
 
 - Images
     + The preview for the image is provided by the [Markdown All in One extension](https://github.com/yzhang-gh/vscode-markdown)
+
 ![Example of markdown figure snippet](imgs/emplImgSnippet.gif)
 
 - R code chunks
     - Highlighting and snippets inside the codeblock are provided by the [vscode R extension](https://github.com/Ikuyadeu/vscode-R) 
+    
 ![Example of R code chunk snippet](imgs/emplChunkSnippet.gif)
 
 ### Intellisense autocompletion for cross-references
