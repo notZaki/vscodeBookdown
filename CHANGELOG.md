@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.5]
+
+- Update package dependencies 
+
 ## [0.0.4]
 
 - Change `Bookdown.ShowTerminal` config to have a default value of `true`
