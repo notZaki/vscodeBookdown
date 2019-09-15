@@ -27,7 +27,7 @@ A list of snippets is in `./snippets/bookdown.json`. Typing the prefix will typi
 ![Example of markdown figure snippet](imgs/emplImgSnippet.gif)
 
 - R code chunks
-    - Highlighting and snippets inside the codeblock are provided by the [vscode R extension](https://github.com/Ikuyadeu/vscode-R) 
+    - Highlighting and snippets inside the codeblock are provided by the [R extension](https://marketplace.visualstudio.com/items?itemName=Ikuyadeu.r) 
     
 ![Example of R code chunk snippet](imgs/emplChunkSnippet.gif)
 
