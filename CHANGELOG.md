@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.6]
+
+- Added details to log messages to make debugging easier
+
 ## [0.0.5]
 
 - Update package dependencies 

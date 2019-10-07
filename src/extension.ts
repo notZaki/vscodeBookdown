@@ -92,7 +92,7 @@ export class Extension {
 
     getTerminal() {
         if (isUndefined(this.curTerminal)) {
-            this.log(`Creating new terminal`);
+            this.log(`Creating new terminal with: ${this.getExecR()}`);
             this.curTerminal = vscode.window.createTerminal(`Bookdown R Prompt`, this.getExecR());
             this.log(`New terminal created`);
         }
@@ -104,7 +104,7 @@ export class Extension {
 
     execRCmd(cmd: string){
         this.getTerminal().sendText(cmd);
-        this.log(`Executed cmd`);
+        this.log(`Executed cmd: ${cmd}`);
     }
 }
 

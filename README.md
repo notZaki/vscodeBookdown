@@ -7,7 +7,7 @@ This extension provides a few amenities for writing with bookdown, such as snipp
 This extension requires [R](https://www.r-project.org/) and the [bookdown package](https://github.com/rstudio/bookdown). 
 
 By default, the extension will assume that the R binary is in the system path and can be launched either by `R.exe` on windows or `R` on Mac/Linux.
-If this isn't the case, then the path to the R binary can be specified in the `Bookdown.R` configuration.  
+If this isn't the case, then the path to the R binary can be specified in the `Bookdown.R` configuration.   
 
 ## Features
 
